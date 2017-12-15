@@ -1,34 +1,24 @@
 {
   "name": "PackageUpdater",
-  "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "version": "0.1.2",
+  "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
-    "clean": "rimraf dist",
-    "build": "electron-packager . --out=dist",
-    "setup": "electron-installer-windows --src dist/electron-quick-start-win32-x64/ --dest dist/installers/ --config config.json ",
-    "final": "npm run clean && npm run build && npm run setup"
+    "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/ilyashishov/package-updater",
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "Electron"
   ],
   "author": "IlyaShishov",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "~1.7.8",
-    "electron-installer-windows": "^0.2.0",
-    "electron-wix-msi": "^1.2.3",
     "electron-builder": "^19.49.0",
     "electron-prebuilt": "^1.4.13",
     "electron-winstaller": "^2.6.3"
   },
   "dependencies": {
-    "react": "^16.2.0"
+
   }
 }
