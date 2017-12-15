@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Packages Updater</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  </head>
+  <style>
+    .cont{
+      padding: 20px;
+    }
+    #selected-file{
+      display: inline;
+      margin-left: 20px;
+    }
+    .del-btn{
+      font-size: 22px;
+      line-height: 20px;
+      position: absolute;
+      right: 20px;
+      top: 13px;
+    }
+    .list-group p{
+      padding: 0 10px;
+      margin: 0;
+    }
+    .button-control{
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+    .error{
+      border: 1px solid red;
+    }
+  </style>
+  <body>
+    <div class="cont">
+      <div class="button-control">
+        <div class="float-left">
+          <a href='#' id='select-directory'  class="btn btn-info">Select Directory</a>
+          <span id="selected-file">You selected:</span>
+        </div>
+        <div class="float-right">
+          <a href='#' id='update'  class="btn btn-primary">Update</a>
+        </div>
+      </div>
+      <div class="">
+        <h3>Select Package</h3>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Package Name" id="input-package-name">
+          <span class="input-group-btn">
+            <button class="btn btn-secondary" id="add-package" type="button">Add</button>
+          </span>
+        </div>
+      </div>
+      <br>
+      <div>
+        <ul class="list-group" id='packages-names'></ul>
+      </div>
+    </div>
+  </body>
+  <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src='./renderer.js'></script>
+</html>
